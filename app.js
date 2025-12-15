@@ -38,7 +38,6 @@ const getCityByState = async (cid, sid) => {
 }
 
 for (let country in countryCodes) {
-    console.log(country);
     let code = countryCodes[country];
     let option = document.createElement("option");
     option.value = code;
@@ -67,21 +66,30 @@ submit.addEventListener('click', (event) => {
 });
 
 let apikeyw = "f0ce81830d4ad598f3879e4ad0de54fb";
-let weather1 = document.querySelector(".weather");
-let city1 = document.querySelector(".city");
-let data;
-async function weather(city) {
 
+async function weather(city) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikeyw}`;
     const response = await fetch(url);
     data = await response.json();
-    let temp = data.main.temp - 273;
-
-    window.open("data.html","_self");
-    // console.log(temp, "Celc");
-    // city1.innerText = `${cityOp.value}`;
-    weather1.innerText = `${temp} Celc`;
+    localStorage.setItem("weatherData", JSON.stringify(data));
+    window.open("data.html", "_self");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const text = "Weather info app";
 // const textElement = document.querySelector('.h');
@@ -127,18 +135,3 @@ async function weather(city) {
 
 // // Start the animation
 // type();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

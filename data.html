@@ -4,13 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wather info.</title>
+    <link rel="stylesheet" href="data.css">
 </head>
 <body>
-    <div class="container">
-        <h2 class="city"></h2>
-        <p class="weather"></p>
+    <div class="head">
+        <h1>Weather Info App</h1>
     </div>
-    <!-- <script src="country.js"> </script> -->
-    <!-- <script src="app.js"></script> -->
+    <div class="container">
+        <div class="city">
+            <h2 class="countryName">Country : </h2>
+            <h2 class="cityName">City : </h2>
+        </div>
+        <div class="temp">
+            <h2 class="currTemp">Current temp</h2>
+            <img src="" alt="Image according current temp" class="icon">
+        </div>
+    </div>
+    <div class="desc">
+        <div class="temp-min-max">
+            <p class="temp-min">Min-Temp : </p>
+            <p class="temp-max">Max-Temp : </p>
+        </div>
+        <div>
+            <p class="sign">|</p>
+        </div>
+        <div class="hum">
+            <p class="humidity">Humidity : </p>
+        </div>
+        <div>
+            <p class="sign">|</p>
+        </div>
+        <div class="description">
+            <p class="descrip">Weather : </p>
+        </div>
+    </div>
+    <div class="back">
+        <button class="btn">Back <span>←</span></button>
+    </div>
+    <script src="data.js"></script>
 </body>
 </html>
